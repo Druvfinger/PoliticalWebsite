@@ -21,14 +21,18 @@ async function makeCall(url) {
 async function displayPartySubjects(partyAbbreviation, imgUrl, dropdownId){
     let imgId;
     let subjectDropDownId;
+    let cardId;
     if(dropdownId.endsWith('2')){
         imgId = 'logo_dropdown2';
         subjectDropDownId = 'subjectList2'
+        cardId = 'bps2'
     } else {
         imgId = 'logo_dropdown1';
         subjectDropDownId = 'subjectList1'
+        cardId = 'bps1'
     }
-    
+    document.getElementById(subjectDropDownId).innerHTML = ''
+
     switch(partyAbbreviation){
        case 'SD': 
             document.getElementById(dropdownId).textContent = 'Sverigedemokraterna';
@@ -61,7 +65,6 @@ async function displayPartySubjects(partyAbbreviation, imgUrl, dropdownId){
     } else {
         document.getElementById('dropdownMenuButton4').hidden = false
     }
-    
    
     getPartySubjects(partyAbbreviation).then(subjects => {
         subjects.sort((a, b) => a.name.localeCompare(b.name)); // Sort by name property
@@ -72,7 +75,7 @@ async function displayPartySubjects(partyAbbreviation, imgUrl, dropdownId){
             link.textContent = subject.name; // Use the name from the subject object
             link.classList.add('text-decoration-none', 'text-secondary', 'ms-2');
             newItem.appendChild(link);
-            newItem.onclick = () => displayBulletPoints(subject.subjectId, subjectDropDownId); // Updated to use subjectId
+            newItem.onclick = () => displayBulletPoints(subject.subjectId, subjectDropDownId);
             document.getElementById(subjectDropDownId).appendChild(newItem);
         });
     })
@@ -142,7 +145,8 @@ async function displayBulletPoints(subjectId, subjectDropDownId){
         dropdownId = 'dropdownMenuButton4'
         cardTitleId = 'cardTitle2'
     }
-
+    document.getElementById(cardTitleId).innerHTML = ''
+    document.getElementById(cardBodyId).innerHTML = ''
     document.getElementById(cardId).hidden = false
     
 
