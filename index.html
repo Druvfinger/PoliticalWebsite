@@ -26,17 +26,16 @@
       <div class="container mt-3">
         <div class="row">
           <!-- THIS IS THE LEFT SIDE PARTY START -->
-          <div class="col"> 
+          <div class="col-6"> 
             <div class="row">
               <!-- IMG 1 START -->
-              <div class="col">
-                <img src="" alt="" id="logo_dropdown1" style="max-height: 30px" class="justify-content-start mt-1"/>
+              <div class="col-2">
+                <img src="img/Centerpartiet_logo.png" alt="" id="logo_dropdown1" style="max-height: 30px" class="justify-content-start mt-1"/>
               </div>
               <!-- IMG 1 END -->
               <!-- Dropdowns START -->
-              <div class="col">
-                <div class="dropdown row">
-                  <div class="col-8">
+              <div class="col-8">
+                <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Välj Parti</button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                       <li class="dropdown-item row" onclick="displayPartySubjects('SD', 'img/Sverigedemokraterna_logo.png', 'dropdownMenuButton1')">
@@ -72,26 +71,23 @@
                         <a class="col-8 text-decoration-none text-secondary" href="#">Vänsterpartiet</a>
                       </li>
                     </ul>
-                  </div>
               </div>
-              <div class="dropdown row">
-                <div class="col">
+              <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">Välj Ämne</button>
                   <ul class="dropdown-menu scrollable-dropdown" aria-labelledby="dropdownMenuButton4" id="subjectList2"></ul>
-                </div>
               </div>
             </div>
-              </div>
             </div>
-
+          </div>    
           <!-- THIS IS THE LEFT SIDE PARTY END -->
           <!-- THIS IS THE RIGH SIDE PARTY START-->
-          <div class="col">
-            <div class="dropdown">
-              <div class="row justify-content-start">
-                <div class="col">
-                  <img src="" alt="" id="logo_dropdown2" style="max-height: 30px" class="justify-content-start mt-1"/>
-                </div>
+          <div class="col-6">
+            <div class="row">
+              <div class="col-2">
+                <img src="img/Centerpartiet_logo.png" alt="" id="logo_dropdown2" style="max-height: 30px" class="justify-content-start mt-1"/>
+              </div>
+              <div class="col-8">
+                <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                     Välj Parti
                   </button>
@@ -129,15 +125,13 @@
                       <a class="col-8 text-decoration-none text-secondary" href="#">Vänsterpartiet</a>
                     </li>
                   </ul>
+                </div>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" hidden="true">Välj Ämne</button>
+                  <ul class="dropdown-menu scrollable-dropdown" aria-labelledby="dropdownMenuButton3" id="subjectList1"></ul>
+                </div>
               </div>
             </div>
-            <div class="dropdown row">
-              <div class="col">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" hidden="true">Välj Ämne</button>
-                <ul class="dropdown-menu scrollable-dropdown" aria-labelledby="dropdownMenuButton3" id="subjectList1"></ul>
-              </div>
-            </div>
-          </div>
           <!-- THIS IS THE RIGH SIDE PARTY END-->
         </div>
       </div>
