@@ -129,32 +129,32 @@ async function displayBulletPoints(subjectId, subjectDropDownId){
     let cardId;
     let cardBodyId;
     let dropdownId;
+    let cardTitleId;
     if(subjectDropDownId.endsWith('1')){ 
         cardId = 'bps1'
         cardBodyId = 'bps1List'
         dropdownId = 'dropdownMenuButton3'
+        cardTitleId = 'cardTitle1'
     } 
     else { 
         cardId = 'bps2'
         cardBodyId = 'bps2List'
         dropdownId = 'dropdownMenuButton4'
+        cardTitleId = 'cardTitle2'
     }
 
     document.getElementById(cardId).hidden = false
+    
 
     getSubjectBulletPoints(subjectId).then(bulletpoints => {
-        let titleElement = document.createElement('h5')
-        let text = bulletpoints[0].subject
-        let titleText = document.createTextNode(text)
-        titleElement.classList.add('card-title')
-        titleElement.appendChild(titleText);
-        document.getElementById(cardId).appendChild(titleElement)
-        
+        let subject = bulletpoints[0].subject
+        document.getElementById(cardTitleId).textContent = subject
+        document.getElementById(dropdownId).textContent = subject
         bulletpoints.forEach(bulletpoint => {
             let liElement = document.createElement('li')
             let bpText = document.createTextNode(bulletpoint.bp)
-            liElement.
-            document.getElementById(cardBodyId).appendChild(bpText)
+            liElement.appendChild(bpText)
+            document.getElementById(cardBodyId).appendChild(liElement)
         })
     })
     .catch(error => {

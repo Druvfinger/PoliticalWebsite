@@ -1,0 +1,12 @@
+.scrollable-dropdown {
+    max-height: 400px; /* Adjust this value based on your needs */
+    overflow-y: auto;  /* Enables vertical scrolling */
+    overflow-x: auto; 
+    text-wrap: nowrap;
+}
+.scrollable-card {
+    max-height: 400px;
+    max-width: 700px;
+    overflow-y: auto;  /* Enables vertical scrolling */
+    overflow-x: auto;
+}
